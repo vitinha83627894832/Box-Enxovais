@@ -1,2 +1,4 @@
 # Box-Enxovais
 Projeto desenvolvido no 4º ano do curso Técnico em Informática.
+Este projeto foi pensado e desenvolvido por mim e por minha dupla de tcc, Marcela. O objetivo deste e-commerce foi ajudar o meu pai que trabalha com vendas, para realizar as mesmas, ele utiliza de um catálogo físico onde contém todos os itens de cama, mesa e banho. Porém, existem vários clientes e somente 1 catálogo, logo, o website foi desenvolvido em forma de um catálogo virtual, onde o cliente pode ter acesso as fotos dos produtos e às descrições deles, podendo fazer login e cadastro no site, além de adicionar produtos ao carrinho e poder finalizar a compra. 
+Na tela do administrador, o adm terá acesso aos relatórios de compra e venda por cliente, relatórios de produtos e estoque. Podendo assim, saber quanto e o que o cliente comprou, realizando a entrega dos produtos.
