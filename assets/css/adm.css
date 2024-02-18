@@ -1,0 +1,806 @@
+/*Google Fonts Import Link*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #4c4d4f; /* cor dos ícones */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #f5f7fa; /*cor da sidebar */
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+
+/*INÍCIO DA LOGO SIDEBAR*/
+.sidebar .logo-details img{
+    font-size: 30px;
+    margin: auto;
+    display: block;
+    height: 120px;
+    width: 100px;
+}
+/*FIM DA LOGO SIDEBAR*/
+
+
+/*INÍCIO DA CONFIGURAÇÃO DOS LINKS*/
+.sidebar .nav-links{
+    height: 100%;
+    padding-top: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar .nav-links::-webkit-scrollbar{ /* usado para estilizar a barra de rolagem. 
+O ::-webkit indica que isso se aplica a navegadores que utilizam o motor WebKit, como o Google Chrome ou o Safari.*/
+    display: none;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li:hover{
+    background-color: #91aec9;  
+    color: white;
+}
+
+.sidebar .nav-links li i{
+    height: 70px;
+    margin-top: 15px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li.showMenu i.arrow{/*Rotação da seta para baixo e para cima*/
+    transform: rotate(-180deg);
+}
+
+.sidebar .nav-links li .icon-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;    
+}
+
+.sidebar .nav-links li a:hover{
+    display: flex;
+    align-items: center;
+    text-decoration: none;    
+}
+
+.sidebar .nav-links li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+    color: #4c4d4f;
+}
+
+.sidebar .nav-links li a .link_name:hover{ /* hover dos links */
+   color: white;
+}
+
+.sidebar .nav-links li .sub-menu {
+    padding: 6px 6px 14px 14px;
+    color: #4c4d4f;
+    margin-top: -10px;
+    background: #f5f7fa;
+    display: none;
+}
+
+.sidebar .nav-links li.showMenu .sub-menu{/*Faz com que o botão fique deslizante*/
+    display: block;
+}
+
+.sidebar .nav-links li .sub-menu a {
+    color: #4c4d4f;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+.sidebar .nav-links li .sub-menu a:hover{/*Deixa as letras da ligem brancas*/
+    opacity: 1;
+    color: #FFFFFF;
+}
+
+.sidebar .nav-links li .sub-menu .link_name{
+    display: none;
+}
+
+.sidebar .nav-links li .sub-menu.blank{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 3px 20px 6px 16px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav-links li:hover .sub-menu.blank{
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*FIM DA CONFIGURAÇÃO DOS LINKS*/
+
+
+/*INÍCIO DA CONFIGURAÇÃO DO PERFIL DO ADM*/
+.sidebar .profile-details{
+    position: fixed;
+    bottom: 0;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #4c4d4f;
+    color: white;
+    padding: 6px 10px;
+    transition: all 0.4s ease;
+}
+
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.home-section{
+    margin-left: 270px;
+    width: 80%;
+}
+/*FIM DA CONFIGURAÇÃO DO PERFIL DO ADM*/
+
+
+
+/*INÍCIO DA EDIÇÃO DA LISTAGEM*/
+
+.card-body{
+    border: none;
+    padding: 10px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.pesquisar{
+    width: 50%;
+    justify-content: space-between;
+}
+
+.card-title{
+    text-align: center;
+}
+
+
+.title-marca{
+    margin-top: 20%;
+    align-items: center;
+    font-weight:800;
+}
+
+.btn-plus{
+    color: #cb9897;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
+.mt{
+    margin-top: 1rem;
+}
+
+.container{
+    max-width: 1440px;
+    max-height: 90%;
+    width: 100%;
+    background: #fff;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    border-radius: 3px;
+}
+
+
+.tbl{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl thead{
+    background: #424949;
+    color: #fff;
+}
+
+.tbl thead tr th{
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    letter-spacing: 0.2rem;
+    vertical-align: top;
+    border: 1px solid #aab7b8;
+    color: #ddd;
+}
+
+.tbl tbody tr td{
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #aab7b8;
+    padding: 0.8rem;
+}
+
+.tbl tr:nth-child(even){/*Deixa as linhas intercaladas entre uma mais clara e outra mais escura*/
+    background: #ccc;
+}
+
+.tbl tr:hover td{
+    background: #839192;
+    color: #000;
+    transition: all 0.3s ease-in;
+}
+
+.tbl .botao-listar{
+    display: inline-block;
+    border: none;
+    margin: 0 auto;
+    padding: 0.4rem;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.btn_trash{
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn_edit{
+    background: #1e8449;
+    color: #fff;
+}
+
+@media(max-width: 768px){
+    .tbl thead{
+        display: none;
+    }
+
+    .tbl tr, .tbl td{
+        display: block;
+        width: 100%;
+    }
+
+    .tbl tr{
+        margin-bottom: 1rem;
+    }
+
+    .tbl tbody tr td{
+        text-align: right;
+        position: relative;
+    }
+
+    .tbl td::before{
+        content: attr(data-lable);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding-left: 1.2rem;
+    }
+}
+
+/*FIM DA EDIÇÃO DA LISTAGEM*/
+
+/*INÍCIO DA EDIÇÃO DO BOTÃO DE PESQUISAR*/
+.search-box{
+    width: 80%;
+    background:#0000001c;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;/*joga o 1ºnitem totalmente pra direita e o 2º totalmente pra direita*/
+    align-items: center;
+}
+
+.search-box:hover{
+    background-color: #aab7b8;
+    transition: 0.5s;
+
+}
+
+.search-text{
+    border: none; /*não quer nenhuma borda*/
+    background: none;
+    width: 80%;
+    outline: none;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.search-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.cor-i{
+    color: #cb9897;
+    font-size: 20px;
+    
+}
+/*FIM DA EDIÇÃO DO BOTÃO DE PESQUISAR*/
+
+/*INÍCIO DA EDIÇÃO DO MODAL (LISTAGEM)*/
+
+.fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    /* ou ajuste conforme necessário */
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    overflow-y: auto;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+
+.fade,
+.modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+.modal.hide,
+.fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.hide {
+    top: 0;
+}
+
+/*FIM DA EDIÇÃO DO MODAL*/
+
+
+
+
+
+/* ------------------------------- FORMULARIO CADASTRO DE PRODUTO ------------------------------------ */
+.cadastro{
+    max-width: 900px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 25px 30px;
+    border-radius: 9px;
+}
+
+.cadastro .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.cadastro .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background: linear-gradient(135deg, #cb9897, #f5f7fa);
+}
+
+/*Início do bloco com dois elementos*/
+.cadastro form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box .input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    box-shadow: 1px 1px 6px #0000001c;
+    outline: none;
+    background: white;
+    padding: 10px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.user-details .input-box .input:focus,
+.user-details .input-box .input:valid{
+    border-color: #9b59b6;
+}
+/*Fim do bloco com dois elementos*/
+
+
+/*Início do bloco com três elementos*/
+.cadastro form .medida{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .medida .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 3 - 20px);
+}
+
+.medida .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.medida .input-box .input{
+    height: 45px;
+    outline: none;
+    border-radius: 11px;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 1px 1px 6px #0000001c;
+    border: none;
+    outline: none;
+    background: white;
+}
+
+.medida .input-box .input:focus,
+.medida .input-box .input:valid{
+    border-color: #9b59b6;
+}
+/*......................*/
+
+
+/*Estilização do input file*/
+#picture__input {
+    display: none;
+  }
+
+  #picture__input2 {
+    display: none;
+  }
+  
+  .picture {
+    width: 400px;
+    aspect-ratio: 16/9;/*Formata o tamanho do campo de texto onde as imagens serão exibidas*/
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;/*É a borda pontilhada em volta do label. A cor da borda é a mesma cor do input*/
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {/*Qunado clicar a cor vai mudar*/
+    border-color: #cb9897;
+    color: #FFFFFF;
+    background: #eee;
+  }
+  
+  .picture:focus {/*Qunado estiver no lable será destacado*/
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+  }
+  
+/*......................*/
+
+/*Button do listar, alterar e cadastrar da página de adm*/
+form .button{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .button .input{
+    height: 100%;
+    width: 40%;
+    outline: none;
+    color: #FFFFFF;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 9px;
+    letter-spacing: 2px;
+    background: #cb9897;
+    text-transform: uppercase;
+}
+
+form .button .input:hover{
+    background: #4c4d4f;
+}
+
+
+/*......................*/
+
+@media (max-width: 584px){
+    .cadastro{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .medida{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .cadastro form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*Alert Bootstrap*/
+.alert {
+    position: relative;
+    padding: 10px;
+}
+
+.alert-heading {
+    color: inherit
+}
+
+.alert-link {
+    font-weight: 700
+}
+
+.alert-dismissible {
+    padding-right: 3rem
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.25rem 1rem
+}
+
+.alert-primary {
+    color: #994d09;
+    background-color: #ffe6cf;
+    border-color: #ffd9b7
+}
+
+.alert-primary .alert-link {
+    color: #7a3e07
+}
+
+.alert-secondary {
+    color: #000a3c;
+    background-color: #cccfe0;
+    border-color: #b3b7d1
+}
+
+.alert-secondary .alert-link {
+    color: #000830
+}
+
+.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc
+}
+
+.alert-success .alert-link {
+    color: #0c4128
+}
+
+.alert-info {
+    color: #055160;
+    background-color: #cff4fc;
+    border-color: #b6effb
+}
+
+.alert-info .alert-link {
+    color: #04414d
+}
+
+.alert-warning {
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5
+}
+
+.alert-warning .alert-link {
+    color: #523e02
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7
+}
+
+.alert-danger .alert-link {
+    color: #6a1a21
+}
+
+.alert-light {
+    color: #4c4d4f;
+    background-color: transparent;
+    border: none;
+    padding: 7px;
+    margin: 7px;
+}
+
+
+
+
+
+
+
+
+
+/*INÍCIO DO CARD DO ADM*/
+
+ /* .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 10px;  
+    width: 60%; 
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cadastro .input[type="text"],
+.cadastro .input[type="file"],
+.cadastro .input[type="password"],
+.cadastro .input[type="tel"],
+.cadastro .input[type="date"],
+.cadastro .input[type="email"],
+ select {
+    border: none;
+    box-shadow: 1px 1px 6px #0000001c;
+    outline: none;
+    background: white;
+    padding: 10px 10px;
+    border-radius: 15px;
+    width: 70%;
+    transition: 0.3s ease;
+}
+
+
+.input-box .input:hover{
+    background-color: white;
+}
+
+.cadastro .input:focus {
+    background: white;
+}
+
+.cadastro .botao {
+    background: #cb9897;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px auto;
+}
+
+.cadastro .botao:hover {
+    background-color: #4c4d4f;
+    cursor: pointer;
+} */
+
+/* ---------- */
